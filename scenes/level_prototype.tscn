@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scenes/character.tscn" type="PackedScene" id=1]
+[ext_resource path="res://images/glow.svg" type="Texture" id=2]
+
+[sub_resource type="Gradient" id=1]
+colors = PoolColorArray( 0, 0, 0, 1, 0, 0, 0, 1 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+width = 1920
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 960, 10 )
+
+[sub_resource type="CircleShape2D" id=4]
+radius = 30.0
+
+[node name="level" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 960, 0 )
+current = true
+smoothing_enabled = true
+
+[node name="floor" type="StaticBody2D" parent="."]
+
+[node name="sprite" type="Sprite" parent="floor"]
+position = Vector2( 0, -10.0341 )
+scale = Vector2( 1, 19.9824 )
+texture = SubResource( 2 )
+centered = false
+
+[node name="shape" type="CollisionShape2D" parent="floor"]
+position = Vector2( 960, 0 )
+shape = SubResource( 3 )
+
+[node name="character" parent="." instance=ExtResource( 1 )]
+position = Vector2( 90, -100 )
+
+[node name="goal" type="Area2D" parent="."]
+position = Vector2( 1745.02, -53.3142 )
+
+[node name="shape" type="CollisionShape2D" parent="goal"]
+shape = SubResource( 4 )
+
+[node name="sprite" type="Sprite" parent="goal"]
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 2 )
