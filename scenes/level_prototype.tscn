@@ -1,18 +1,58 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/character.tscn" type="PackedScene" id=1]
 [ext_resource path="res://images/glow.svg" type="Texture" id=2]
+[ext_resource path="res://scripts/level_prototype.gd" type="Script" id=3]
 
-[sub_resource type="CircleShape2D" id=4]
+[sub_resource type="CircleShape2D" id=1]
 radius = 30.0
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 960, 50 )
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 10, 560 )
 
 [node name="level" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="bg" type="CanvasLayer" parent="."]
+layer = -2
+
+[node name="transition" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="color" type="ColorRect" parent="transition"]
+visible = false
+margin_top = -540.0
+margin_right = 1920.0
+margin_bottom = 540.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="label_top" type="Label" parent="transition"]
+visible = false
+margin_left = 330.0
+margin_top = -290.0
+margin_right = 370.0
+margin_bottom = -276.0
+text = "The top label..."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="label_bottom" type="Label" parent="transition"]
+visible = false
+margin_left = 1160.0
+margin_top = 230.0
+margin_right = 1200.0
+margin_bottom = 244.0
+text = "...and the bottom one"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 960, 0 )
@@ -26,7 +66,7 @@ position = Vector2( 90, -100 )
 position = Vector2( 1745.02, -53.3142 )
 
 [node name="shape" type="CollisionShape2D" parent="goal"]
-shape = SubResource( 4 )
+shape = SubResource( 1 )
 
 [node name="sprite" type="Sprite" parent="goal"]
 scale = Vector2( 0.2, 0.2 )
@@ -36,17 +76,19 @@ texture = ExtResource( 2 )
 
 [node name="shape" type="CollisionShape2D" parent="bottom"]
 position = Vector2( 963.091, 600 )
-shape = SubResource( 5 )
+shape = SubResource( 2 )
 
 [node name="left_wall" type="StaticBody2D" parent="."]
 position = Vector2( -10, 0 )
 
 [node name="shape" type="CollisionShape2D" parent="left_wall"]
-shape = SubResource( 6 )
+shape = SubResource( 3 )
 
 [node name="right_wall" type="StaticBody2D" parent="."]
 position = Vector2( 1940, 0 )
 
 [node name="shape" type="CollisionShape2D" parent="right_wall"]
 position = Vector2( -10, 0 )
-shape = SubResource( 6 )
+shape = SubResource( 3 )
+
+[node name="tween" type="Tween" parent="."]
