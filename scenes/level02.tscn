@@ -46,7 +46,20 @@ scale = Vector2( 1, 20 )
 texture = SubResource( 4 )
 centered = false
 
-[node name="platform02" type="StaticBody2D" parent="." index="11"]
+[node name="platform01_s" type="StaticBody2D" parent="." index="11"]
+position = Vector2( 720, 150 )
+
+[node name="shape" type="CollisionShape2D" parent="platform01_s" index="0"]
+position = Vector2( 200, 0 )
+shape = SubResource( 3 )
+
+[node name="sprite" type="Sprite" parent="platform01_s" index="1"]
+position = Vector2( 0, -10 )
+scale = Vector2( 1, 20 )
+texture = SubResource( 4 )
+centered = false
+
+[node name="platform02" type="StaticBody2D" parent="." index="12"]
 position = Vector2( 1360, -270 )
 
 [node name="shape" type="CollisionShape2D" parent="platform02" index="0"]
@@ -54,6 +67,19 @@ position = Vector2( 200, 0 )
 shape = SubResource( 3 )
 
 [node name="sprite" type="Sprite" parent="platform02" index="1"]
+position = Vector2( 0, -10 )
+scale = Vector2( 1, 20 )
+texture = SubResource( 4 )
+centered = false
+
+[node name="platform02_s" type="StaticBody2D" parent="." index="13"]
+position = Vector2( 1360, 270 )
+
+[node name="shape" type="CollisionShape2D" parent="platform02_s" index="0"]
+position = Vector2( 200, 0 )
+shape = SubResource( 3 )
+
+[node name="sprite" type="Sprite" parent="platform02_s" index="1"]
 position = Vector2( 0, -10 )
 scale = Vector2( 1, 20 )
 texture = SubResource( 4 )
