@@ -21,9 +21,6 @@ text_bottom = "it affects me more than I know?"
 [node name="goal" parent="." index="4"]
 position = Vector2( 1700, -330 )
 
-[node name="sprite" parent="goal" index="1"]
-position = Vector2( 0, 660 )
-
 [node name="floor" type="StaticBody2D" parent="." index="9"]
 
 [node name="shape" type="CollisionShape2D" parent="floor" index="0"]
