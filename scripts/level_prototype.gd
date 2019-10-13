@@ -5,7 +5,6 @@ class_name Level
 export var text_top = ""
 export var text_bottom = ""
 
-onready var character : KinematicBody2D = $character
 onready var goal : Area2D = $goal
 onready var bottom : Area2D = $bottom
 onready var intro_color : ColorRect = $transition/color
@@ -55,7 +54,11 @@ func intro_text():
 	yield(tween, "tween_all_completed")
 
 func goto_next_level(body):
-	pass
+	
+	# Fade everything out
+	tween.interpolate_property(intro_color, "modulate:a", 0, 1, 1.2, Tween.TRANS_CUBIC, Tween.EASE_IN)
+	tween.start()
+	yield(tween, "tween_all_completed")
 
 func reset_character(body):
 	pass

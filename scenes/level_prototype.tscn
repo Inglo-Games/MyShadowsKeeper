@@ -16,11 +16,18 @@ extents = Vector2( 10, 560 )
 [node name="level" type="Node2D"]
 script = ExtResource( 3 )
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 960, 0 )
+current = true
+smoothing_enabled = true
+
 [node name="bg" type="CanvasLayer" parent="."]
 layer = -2
 
 [node name="transition" type="CanvasLayer" parent="."]
 layer = 2
+offset = Vector2( 0, 560 )
+transform = Transform2D( 1, 0, 0, 1, 0, 560 )
 
 [node name="color" type="ColorRect" parent="transition"]
 visible = false
@@ -53,11 +60,6 @@ text = "...and the bottom one"
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 960, 0 )
-current = true
-smoothing_enabled = true
 
 [node name="character" parent="." instance=ExtResource( 1 )]
 position = Vector2( 90, -100 )
