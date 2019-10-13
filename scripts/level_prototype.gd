@@ -10,12 +10,16 @@ onready var bottom : Area2D = $bottom
 onready var intro_color : ColorRect = $transition/color
 onready var intro_label_top : Label = $transition/label_top
 onready var intro_label_bottom : Label = $transition/label_bottom
+onready var flames_group : Node2D = $flames_group
 onready var tween : Tween = $tween
 
 
 func _ready():
 	
 	intro_text()
+	
+	for child in flames_group.get_children():
+		child.connect("body_entered", self, "reset_character")
 	
 	goal.connect("body_entered", self, "goto_next_level")
 	bottom.connect("body_entered", self, "reset_character")

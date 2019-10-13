@@ -94,3 +94,5 @@ position = Vector2( -10, 0 )
 shape = SubResource( 3 )
 
 [node name="tween" type="Tween" parent="."]
+
+[node name="flames_group" type="Node2D" parent="."]
