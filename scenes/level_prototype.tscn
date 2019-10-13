@@ -26,8 +26,8 @@ layer = -2
 
 [node name="transition" type="CanvasLayer" parent="."]
 layer = 2
-offset = Vector2( 0, 560 )
-transform = Transform2D( 1, 0, 0, 1, 0, 560 )
+offset = Vector2( 0, 540 )
+transform = Transform2D( 1, 0, 0, 1, 0, 540 )
 
 [node name="color" type="ColorRect" parent="transition"]
 visible = false

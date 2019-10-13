@@ -14,12 +14,15 @@ extents = Vector2( 200, 10 )
 [sub_resource type="GradientTexture" id=4]
 width = 400
 
-[node name="level" instance=ExtResource( 1 )]
-text_top = "It forever mimicked me"
-text_bottom = "but never affected me"
+[node name="level" index="0" instance=ExtResource( 1 )]
+text_top = "But what if"
+text_bottom = "it affects me more than I know?"
 
 [node name="goal" parent="." index="4"]
 position = Vector2( 1700, -330 )
+
+[node name="sprite" parent="goal" index="1"]
+position = Vector2( 0, 660 )
 
 [node name="floor" type="StaticBody2D" parent="." index="9"]
 
@@ -40,20 +43,34 @@ position = Vector2( 720, -150 )
 position = Vector2( 200, 0 )
 shape = SubResource( 3 )
 
-[node name="sprite" type="Sprite" parent="platform01" index="1"]
+[node name="platform01_shadow" type="StaticBody2D" parent="." index="11"]
+position = Vector2( 720, 150 )
+
+[node name="shape" type="CollisionShape2D" parent="platform01_shadow" index="0"]
+position = Vector2( 200, 0 )
+shape = SubResource( 3 )
+
+[node name="sprite" type="Sprite" parent="platform01_shadow" index="1"]
 position = Vector2( 0, -10 )
 scale = Vector2( 1, 20 )
 texture = SubResource( 4 )
 centered = false
 
-[node name="platform02" type="StaticBody2D" parent="." index="11"]
+[node name="platform02" type="StaticBody2D" parent="." index="12"]
 position = Vector2( 1360, -270 )
 
 [node name="shape" type="CollisionShape2D" parent="platform02" index="0"]
 position = Vector2( 200, 0 )
 shape = SubResource( 3 )
 
-[node name="sprite" type="Sprite" parent="platform02" index="1"]
+[node name="platform02_shadow" type="StaticBody2D" parent="." index="13"]
+position = Vector2( 1360, 270 )
+
+[node name="shape" type="CollisionShape2D" parent="platform02_shadow" index="0"]
+position = Vector2( 200, 0 )
+shape = SubResource( 3 )
+
+[node name="sprite" type="Sprite" parent="platform02_shadow" index="1"]
 position = Vector2( 0, -10 )
 scale = Vector2( 1, 20 )
 texture = SubResource( 4 )
