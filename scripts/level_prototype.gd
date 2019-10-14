@@ -59,12 +59,24 @@ func intro_text():
 
 func goto_next_level(body):
 	
+	$goal.visible = false
 	$goal.queue_free()
 	
 	# Fade everything out
 	tween.interpolate_property(intro_color, "modulate:a", 0, 1, 1.2, Tween.TRANS_CUBIC, Tween.EASE_IN)
 	tween.start()
 	yield(tween, "tween_all_completed")
+	
+	# Load next level
+	print(filename)
+	
+	if filename == "res://scenes/tutorial.tscn":
+		get_tree().change_scene("res://scenes/menu.tscn")
+	elif filename == "res://scenes/level08.tscn":
+		get_tree().change_scene("res://scenes/menu.tscn")
+	# else
+	var lvl_num : int = filename.to_int()
+	get_tree().change_scene("res://scenes/level%02d.tscn" % (lvl_num + 1))
 
 func reset_character(body):
 	
