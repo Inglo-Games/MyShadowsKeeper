@@ -5,24 +5,24 @@ class_name Level
 export var text_top = ""
 export var text_bottom = ""
 
-onready var goal : Area2D = $goal
-onready var bottom : Area2D = $bottom
 onready var intro_color : ColorRect = $transition/color
 onready var intro_label_top : Label = $transition/label_top
 onready var intro_label_bottom : Label = $transition/label_bottom
-onready var flames_group : Node2D = $flames_group
 onready var tween : Tween = $tween
 
+var start_pos = Vector2()
 
 func _ready():
 	
+	start_pos = $character.position
+	
 	intro_text()
 	
-	for child in flames_group.get_children():
+	for child in $flames_group.get_children():
 		child.connect("body_entered", self, "reset_character")
 	
-	goal.connect("body_entered", self, "goto_next_level")
-	bottom.connect("body_entered", self, "reset_character")
+	$goal.connect("body_entered", self, "goto_next_level")
+	$bottom.connect("body_entered", self, "reset_character")
 
 func intro_text():
 	
@@ -59,10 +59,23 @@ func intro_text():
 
 func goto_next_level(body):
 	
+	$goal.queue_free()
+	
 	# Fade everything out
 	tween.interpolate_property(intro_color, "modulate:a", 0, 1, 1.2, Tween.TRANS_CUBIC, Tween.EASE_IN)
 	tween.start()
 	yield(tween, "tween_all_completed")
 
 func reset_character(body):
-	pass
+	
+	if body is Player:
+		
+		tween.interpolate_property(intro_color, "modulate:a", 0, 1, 0.5, Tween.TRANS_CUBIC, Tween.EASE_IN)
+		tween.start()
+		yield(tween, "tween_all_completed")
+		
+		body.position = start_pos
+		
+		tween.interpolate_property(intro_color, "modulate:a", 1, 0, 0.5, Tween.TRANS_CUBIC, Tween.EASE_IN)
+		tween.start()
+		yield(tween, "tween_all_completed")

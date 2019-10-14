@@ -1,4 +1,5 @@
 extends KinematicBody2D
+class_name Player
 
 # Constants
 const MOVE_SPEED : int = 400
