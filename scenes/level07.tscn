@@ -1,0 +1,72 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scenes/level_prototype.tscn" type="PackedScene" id=1]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 750, 10 )
+
+[sub_resource type="GradientTexture" id=1]
+width = 1500
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 200, 10 )
+
+[sub_resource type="GradientTexture" id=4]
+width = 400
+
+[node name="level" instance=ExtResource( 1 )]
+text_top = "If I could just jump into that world"
+text_bottom = "I'd know I'm not crazy."
+
+[node name="goal" parent="." index="4"]
+position = Vector2( 635, 440 )
+
+[node name="floor" type="StaticBody2D" parent="." index="10"]
+position = Vector2( 750, 0 )
+
+[node name="shape" type="CollisionShape2D" parent="floor" index="0"]
+shape = SubResource( 2 )
+
+[node name="sprite" type="Sprite" parent="floor" index="1"]
+scale = Vector2( 1, 20 )
+texture = SubResource( 1 )
+
+[node name="p01" type="StaticBody2D" parent="." index="11"]
+position = Vector2( 1700, -400 )
+
+[node name="shape" type="CollisionShape2D" parent="p01" index="0"]
+shape = SubResource( 3 )
+
+[node name="sprite" type="Sprite" parent="p01" index="1"]
+scale = Vector2( 1, 20 )
+texture = SubResource( 4 )
+
+[node name="p01_s" type="StaticBody2D" parent="." index="12"]
+position = Vector2( 1700, 400 )
+
+[node name="shape" type="CollisionShape2D" parent="p01_s" index="0"]
+shape = SubResource( 3 )
+
+[node name="sprite" type="Sprite" parent="p01_s" index="1"]
+scale = Vector2( 1, 20 )
+texture = SubResource( 4 )
+
+[node name="p02" type="StaticBody2D" parent="." index="13"]
+position = Vector2( 770, -500 )
+
+[node name="shape" type="CollisionShape2D" parent="p02" index="0"]
+shape = SubResource( 3 )
+
+[node name="sprite" type="Sprite" parent="p02" index="1"]
+scale = Vector2( 1, 20 )
+texture = SubResource( 4 )
+
+[node name="p02_s" type="StaticBody2D" parent="." index="14"]
+position = Vector2( 770, 500 )
+
+[node name="shape" type="CollisionShape2D" parent="p02_s" index="0"]
+shape = SubResource( 3 )
+
+[node name="sprite" type="Sprite" parent="p02_s" index="1"]
+scale = Vector2( 1, 20 )
+texture = SubResource( 4 )
