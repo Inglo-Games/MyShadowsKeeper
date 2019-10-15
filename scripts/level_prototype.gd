@@ -74,9 +74,9 @@ func goto_next_level(body):
 		get_tree().change_scene("res://scenes/menu.tscn")
 	elif filename == "res://scenes/level08.tscn":
 		get_tree().change_scene("res://scenes/menu.tscn")
-	# else
-	var lvl_num : int = filename.to_int()
-	get_tree().change_scene("res://scenes/level%02d.tscn" % (lvl_num + 1))
+	else:
+		var lvl_num : int = filename.to_int()
+		get_tree().change_scene("res://scenes/level%02d.tscn" % (lvl_num + 1))
 
 func reset_character(body):
 	
