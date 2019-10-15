@@ -45,7 +45,6 @@ shape = SubResource( 3 )
 
 [node name="flames2" parent="flames_group" index="1" instance=ExtResource( 2 )]
 position = Vector2( 960, 10 )
-scale = Vector2( 3, 3 )
 
 [node name="platform01" type="StaticBody2D" parent="." index="11"]
 position = Vector2( 760, -150 )

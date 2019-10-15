@@ -14,7 +14,7 @@ extents = Vector2( 125, 10 )
 [sub_resource type="GradientTexture" id=4]
 width = 250
 
-[node name="level" index="0" instance=ExtResource( 1 )]
+[node name="level" instance=ExtResource( 1 )]
 text_top = "Am I being paranoid or am I controlling it"
 text_bottom = "as much as it's controlling me?"
 
@@ -41,6 +41,7 @@ position = Vector2( 125, 0 )
 shape = SubResource( 3 )
 
 [node name="sprite" type="Sprite" parent="p01" index="1"]
+visible = false
 position = Vector2( 0, -10 )
 scale = Vector2( 1, 20 )
 texture = SubResource( 4 )
@@ -87,6 +88,7 @@ position = Vector2( 125, 0 )
 shape = SubResource( 3 )
 
 [node name="sprite" type="Sprite" parent="p03" index="1"]
+visible = false
 position = Vector2( 0, -10 )
 scale = Vector2( 1, 20 )
 texture = SubResource( 4 )
