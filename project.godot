@@ -8,15 +8,26 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Node2D",
+"class": "Level",
+"language": "GDScript",
+"path": "res://scripts/level_prototype.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Player",
+"language": "GDScript",
+"path": "res://scripts/character.gd"
+} ]
 _global_script_class_icons={
-
+"Level": "",
+"Player": ""
 }
 
 [application]
 
 config/name="My Shadows Keeper"
-run/main_scene="res://scenes/level_prototype.tscn"
+run/main_scene="res://scenes/menu.tscn"
 config/icon="res://icon.png"
 
 [display]
@@ -59,7 +70,6 @@ jump={
 
 [rendering]
 
-quality/driver/driver_name="GLES2"
 vram_compression/import_etc=true
 vram_compression/import_etc2=false
 environment/default_environment="res://default_env.tres"
