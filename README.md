@@ -6,4 +6,6 @@ This game was created for the [14th Godot Wild Jam](https://itch.io/jam/godot-wi
 
 All code and assets are free to use under the MIT license with the following exceptions:
 
-Bergie Seltzer by David Kerkhoff - http://www.hanodedfonts.com/
+[Water shader](https://github.com/GDquest/Godot-engine-tutorial-demos/tree/master/2018/06-16-intro-to-shaders-2d-water/end) by GDQuest
+[Bergie Seltzer](http://www.hanodedfonts.com/) by David Kerkhoff
+[Tree vector art](https://www.vecteezy.com/vector-art/136338-sapin-silhouettes-vector) from Vecteezy
