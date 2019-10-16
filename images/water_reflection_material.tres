@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=2]
+
+[ext_resource path="res://images/water.shader" type="Shader" id=1]
+[ext_resource path="res://images/water_uv_offset.png" type="Texture" id=2]
+
+[resource]
+resource_local_to_scene = true
+shader = ExtResource( 1 )
+shader_param/tile_factor = 1.0
+shader_param/uv_offset_size = Vector2( 0.3, 0.3 )
+shader_param/wave_size = Vector2( 0.03, 0.05 )
+shader_param/time_scale = Vector2( 0.02, 0.03 )
+shader_param/uv_offset_texture = ExtResource( 2 )
