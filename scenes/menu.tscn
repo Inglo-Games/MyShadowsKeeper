@@ -37,9 +37,9 @@ __meta__ = {
 [node name="vbox" type="VBoxContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 600.0
+margin_left = 750.0
 margin_top = 390.0
-margin_right = 1320.0
+margin_right = 1170.0
 margin_bottom = 818.0
 custom_constants/separation = 64
 alignment = 1
@@ -48,28 +48,28 @@ __meta__ = {
 }
 
 [node name="start_btn" type="Button" parent="vbox"]
-margin_right = 720.0
+margin_right = 420.0
 margin_bottom = 59.0
 custom_fonts/font = ExtResource( 2 )
 text = "START"
 
 [node name="tut_btn" type="Button" parent="vbox"]
 margin_top = 123.0
-margin_right = 720.0
+margin_right = 420.0
 margin_bottom = 182.0
 custom_fonts/font = ExtResource( 2 )
 text = "CONTROLS"
 
 [node name="attr_btn" type="Button" parent="vbox"]
 margin_top = 246.0
-margin_right = 720.0
+margin_right = 420.0
 margin_bottom = 305.0
 custom_fonts/font = ExtResource( 2 )
 text = "Credits"
 
 [node name="quit_btn" type="Button" parent="vbox"]
 margin_top = 369.0
-margin_right = 720.0
+margin_right = 420.0
 margin_bottom = 428.0
 custom_fonts/font = ExtResource( 2 )
 text = "QUIT"

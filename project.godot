@@ -40,6 +40,10 @@ window/size/fullscreen=true
 window/size/test_width=1024
 window/size/test_height=600
 
+[gui]
+
+theme/custom="res://assets/theme.tres"
+
 [input]
 
 move_right={
