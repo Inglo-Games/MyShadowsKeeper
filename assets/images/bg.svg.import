@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/water_uv_offset.png-efc97d51079b0acb5980b4d731ee0716.stex"
+path="res://.import/bg.svg-f52acc137428b2c7850cbc0891425e33.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/water_uv_offset.png"
-dest_files=[ "res://.import/water_uv_offset.png-efc97d51079b0acb5980b4d731ee0716.stex" ]
+source_file="res://assets/images/bg.svg"
+dest_files=[ "res://.import/bg.svg-f52acc137428b2c7850cbc0891425e33.stex" ]
 
 [params]
 
