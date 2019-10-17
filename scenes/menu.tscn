@@ -48,13 +48,14 @@ __meta__ = {
 }
 
 [node name="start_btn" type="Button" parent="vbox"]
+margin_top = 12.0
 margin_right = 420.0
-margin_bottom = 59.0
+margin_bottom = 65.0
 custom_fonts/font = ExtResource( 2 )
 text = "START"
 
 [node name="tut_btn" type="Button" parent="vbox"]
-margin_top = 123.0
+margin_top = 129.0
 margin_right = 420.0
 margin_bottom = 182.0
 custom_fonts/font = ExtResource( 2 )
@@ -63,14 +64,14 @@ text = "CONTROLS"
 [node name="attr_btn" type="Button" parent="vbox"]
 margin_top = 246.0
 margin_right = 420.0
-margin_bottom = 305.0
+margin_bottom = 299.0
 custom_fonts/font = ExtResource( 2 )
 text = "Credits"
 
 [node name="quit_btn" type="Button" parent="vbox"]
-margin_top = 369.0
+margin_top = 363.0
 margin_right = 420.0
-margin_bottom = 428.0
+margin_bottom = 416.0
 custom_fonts/font = ExtResource( 2 )
 text = "QUIT"
 [connection signal="button_up" from="vbox/start_btn" to="." method="_on_start_pressed"]
