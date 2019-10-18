@@ -9,12 +9,13 @@ extents = Vector2( 200, 10 )
 [node name="platform" type="StaticBody2D"]
 
 [node name="shape" type="CollisionShape2D" parent="."]
-position = Vector2( 200, 10 )
+position = Vector2( 200, -10 )
 shape = SubResource( 1 )
 
 [node name="dirt" type="TextureRect" parent="."]
+margin_top = -20.0
 margin_right = 18184.0
-margin_bottom = 920.0
+margin_bottom = 900.0
 rect_scale = Vector2( 0.022, 0.022 )
 texture = ExtResource( 1 )
 stretch_mode = 2
@@ -23,9 +24,9 @@ __meta__ = {
 }
 
 [node name="grass" type="TextureRect" parent="."]
-margin_top = -19.0
+margin_top = -39.0
 margin_right = 5406.0
-margin_bottom = 300.0
+margin_bottom = 280.0
 rect_scale = Vector2( 0.074, 0.06 )
 texture = ExtResource( 2 )
 stretch_mode = 2
