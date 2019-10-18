@@ -28,6 +28,7 @@ position = Vector2( 0, 540 )
 position = Vector2( 0, 540 )
 
 [node name="shader" type="ColorRect" parent="."]
+visible = false
 material = ExtResource( 2 )
 margin_right = 1920.0
 margin_bottom = 1080.0
