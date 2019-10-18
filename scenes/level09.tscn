@@ -1,0 +1,72 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://assets/images/water_uv_offset.png" type="Texture" id=1]
+[ext_resource path="res://assets/images/water_half.shader" type="Shader" id=2]
+[ext_resource path="res://scenes/platform_short.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/level_prototype.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/platform_short_down.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/platform_long.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/platform_long_down.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/platform_med.tscn" type="PackedScene" id=8]
+
+[sub_resource type="ShaderMaterial" id=3]
+resource_local_to_scene = true
+shader = ExtResource( 2 )
+shader_param/tile_factor = 1.0
+shader_param/uv_offset_size = Vector2( 0.3, 0.3 )
+shader_param/wave_size = Vector2( 0.03, 0.05 )
+shader_param/time_scale = Vector2( 0.02, 0.03 )
+shader_param/uv_offset_texture = ExtResource( 1 )
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 100, 10 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 67, 10 )
+
+[node name="level" instance=ExtResource( 4 )]
+text_top = "I can show my shadow deserves"
+text_bottom = "to see the light as much as me"
+
+[node name="shader" parent="reflection" index="0"]
+material = SubResource( 3 )
+
+[node name="goal" parent="." index="5"]
+position = Vector2( 1362.53, 316.183 )
+
+[node name="sprite" parent="goal" index="1"]
+position = Vector2( 0, -632 )
+
+[node name="platform" parent="." index="11" instance=ExtResource( 6 )]
+
+[node name="platform2" parent="." index="12" instance=ExtResource( 7 )]
+
+[node name="platform_med" parent="." index="13" instance=ExtResource( 8 )]
+position = Vector2( 484, -172 )
+
+[node name="med_shadow" type="StaticBody2D" parent="." index="14"]
+position = Vector2( 484, 182 )
+
+[node name="shape" type="CollisionShape2D" parent="med_shadow" index="0"]
+position = Vector2( 100, 0 )
+shape = SubResource( 1 )
+
+[node name="platform_short_down" parent="." index="15" instance=ExtResource( 5 )]
+position = Vector2( 910, 244 )
+
+[node name="short_invis" type="StaticBody2D" parent="." index="16"]
+position = Vector2( 910, -254 )
+
+[node name="shape" type="CollisionShape2D" parent="short_invis" index="0"]
+position = Vector2( 67, 0 )
+shape = SubResource( 2 )
+
+[node name="platform_short" parent="." index="17" instance=ExtResource( 3 )]
+position = Vector2( 1265, -370 )
+
+[node name="short_shadow" type="StaticBody2D" parent="." index="18"]
+position = Vector2( 1265, 380 )
+
+[node name="shape" type="CollisionShape2D" parent="short_shadow" index="0"]
+position = Vector2( 67, 0 )
+shape = SubResource( 2 )

@@ -68,11 +68,9 @@ func goto_next_level(body):
 	yield(tween, "tween_all_completed")
 	
 	# Load next level
-	print(filename)
-	
 	if filename == "res://scenes/tutorial.tscn":
 		get_tree().change_scene("res://scenes/menu.tscn")
-	elif filename == "res://scenes/level08.tscn":
+	elif filename == "res://scenes/level10.tscn":
 		get_tree().change_scene("res://scenes/menu.tscn")
 	else:
 		var lvl_num : int = filename.to_int()

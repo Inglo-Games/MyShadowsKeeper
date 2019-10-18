@@ -1,0 +1,72 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://assets/images/water_uv_offset.png" type="Texture" id=1]
+[ext_resource path="res://assets/images/water_half.shader" type="Shader" id=2]
+[ext_resource path="res://scenes/level_prototype.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/platform_long_down.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/platform_short.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/platform_short_down.tscn" type="PackedScene" id=7]
+
+[sub_resource type="ShaderMaterial" id=1]
+resource_local_to_scene = true
+shader = ExtResource( 2 )
+shader_param/tile_factor = 1.0
+shader_param/uv_offset_size = Vector2( 0.3, 0.3 )
+shader_param/wave_size = Vector2( 0.03, 0.05 )
+shader_param/time_scale = Vector2( 0.02, 0.03 )
+shader_param/uv_offset_texture = ExtResource( 1 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 200, 10 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 63, 10 )
+
+[node name="level" index="0" instance=ExtResource( 3 )]
+text_top = "I know that when I'm gone"
+text_bottom = "my shadow will go with me"
+
+[node name="shader" parent="reflection" index="0"]
+material = SubResource( 1 )
+
+[node name="character" parent="." index="4"]
+position = Vector2( 139.645, -436.722 )
+
+[node name="goal" parent="." index="5"]
+position = Vector2( 1742.91, -82.7879 )
+
+[node name="platform" type="StaticBody2D" parent="." index="11"]
+position = Vector2( 0, -400 )
+
+[node name="shape" type="CollisionShape2D" parent="platform" index="0"]
+position = Vector2( 200, 0 )
+shape = SubResource( 2 )
+
+[node name="platform_shadow" parent="." index="12" instance=ExtResource( 5 )]
+position = Vector2( 0, 390 )
+
+[node name="platform_short" type="StaticBody2D" parent="." index="13"]
+position = Vector2( 800, -10 )
+
+[node name="shape" type="CollisionShape2D" parent="platform_short" index="0"]
+position = Vector2( 63, 0 )
+shape = SubResource( 3 )
+
+[node name="platform_short2" type="StaticBody2D" parent="." index="14"]
+position = Vector2( 1185, -180 )
+
+[node name="shape" type="CollisionShape2D" parent="platform_short2" index="0"]
+position = Vector2( 63, 0 )
+shape = SubResource( 3 )
+
+[node name="platform_short3" parent="." index="15" instance=ExtResource( 6 )]
+position = Vector2( 1680, 0 )
+
+[node name="platform_short_shadow" parent="." index="16" instance=ExtResource( 7 )]
+position = Vector2( 800, 0 )
+
+[node name="platform_short_shadow2" parent="." index="17" instance=ExtResource( 7 )]
+position = Vector2( 1185, 170 )
+
+[node name="platform_short_shadow3" parent="." index="18" instance=ExtResource( 7 )]
+position = Vector2( 1680, 0 )
