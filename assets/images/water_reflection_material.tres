@@ -1,8 +1,7 @@
 [gd_resource type="ShaderMaterial" load_steps=3 format=2]
 
-[ext_resource path="res://assets/images/water.shader" type="Shader" id=1]
+[ext_resource path="res://assets/images/water_half.shader" type="Shader" id=1]
 [ext_resource path="res://assets/images/water_uv_offset.png" type="Texture" id=2]
-
 
 [resource]
 resource_local_to_scene = true
