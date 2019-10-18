@@ -28,7 +28,8 @@ _global_script_class_icons={
 
 config/name="My Shadows Keeper"
 run/main_scene="res://scenes/menu.tscn"
-config/icon="res://icon.png"
+boot_splash/image="res://assets/images/gwj_splash.png"
+config/icon="res://assets/images/icon.png"
 
 [autoload]
 
