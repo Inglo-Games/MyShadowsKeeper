@@ -16,7 +16,6 @@ texture = ExtResource( 1 )
 centered = false
 
 [node name="sprite_shadow" type="Sprite" parent="."]
-material = ExtResource( 2 )
 position = Vector2( 0, 540 )
 texture = ExtResource( 1 )
 centered = false
@@ -27,6 +26,15 @@ position = Vector2( 0, 540 )
 
 [node name="platform_floor_down" parent="." instance=ExtResource( 7 )]
 position = Vector2( 0, 540 )
+
+[node name="shader" type="ColorRect" parent="."]
+material = ExtResource( 2 )
+margin_right = 1920.0
+margin_bottom = 1080.0
+color = Color( 1, 1, 1, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="label" type="Label" parent="."]
 anchor_right = 1.0
