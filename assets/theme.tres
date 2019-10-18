@@ -3,7 +3,6 @@
 [ext_resource path="res://assets/images/flame_glow.svg" type="Texture" id=1]
 [ext_resource path="res://assets/bergieseltzer48.res" type="DynamicFont" id=2]
 
-
 [sub_resource type="StyleBoxEmpty" id=1]
 
 [sub_resource type="StyleBoxTexture" id=2]
