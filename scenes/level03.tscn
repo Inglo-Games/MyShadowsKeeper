@@ -2,10 +2,10 @@
 
 [ext_resource path="res://assets/images/water.shader" type="Shader" id=1]
 [ext_resource path="res://assets/images/water_uv_offset.png" type="Texture" id=2]
-[ext_resource path="res://scenes/platform_floor.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scenes/platform_long_down.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/level_prototype.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/platform_floor.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/platform_floor_down.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scenes/level_prototype.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/platform_long_down.tscn" type="PackedScene" id=6]
 
 [sub_resource type="ShaderMaterial" id=1]
 resource_local_to_scene = true
@@ -19,7 +19,7 @@ shader_param/uv_offset_texture = ExtResource( 2 )
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 200, 10 )
 
-[node name="level" index="0" instance=ExtResource( 6 )]
+[node name="level" instance=ExtResource( 3 )]
 text_top = "But what if"
 text_bottom = "it affects me more than I know?"
 
@@ -29,26 +29,26 @@ material = SubResource( 1 )
 [node name="goal" parent="." index="5"]
 position = Vector2( 1700, -330 )
 
-[node name="platform_floor" parent="." index="9" instance=ExtResource( 3 )]
+[node name="platform_floor" parent="." index="9" instance=ExtResource( 4 )]
 
 [node name="platform_floor_down" parent="." index="10" instance=ExtResource( 5 )]
 
 [node name="platform" type="StaticBody2D" parent="." index="11"]
-position = Vector2( 875, -130 )
+position = Vector2( 875, -140 )
 
 [node name="shape" type="CollisionShape2D" parent="platform" index="0"]
 position = Vector2( 200, 0 )
 shape = SubResource( 2 )
 
-[node name="platform_shadow" parent="." index="12" instance=ExtResource( 4 )]
+[node name="platform_shadow" parent="." index="12" instance=ExtResource( 6 )]
 position = Vector2( 875, 130 )
 
 [node name="platform2" type="StaticBody2D" parent="." index="13"]
-position = Vector2( 1390, -265 )
+position = Vector2( 1390, -275 )
 
 [node name="shape" type="CollisionShape2D" parent="platform2" index="0"]
 position = Vector2( 200, 0 )
 shape = SubResource( 2 )
 
-[node name="platform2_shadow" parent="." index="14" instance=ExtResource( 4 )]
+[node name="platform2_shadow" parent="." index="14" instance=ExtResource( 6 )]
 position = Vector2( 1390, 265 )

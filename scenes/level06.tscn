@@ -2,10 +2,10 @@
 
 [ext_resource path="res://assets/images/water.shader" type="Shader" id=1]
 [ext_resource path="res://assets/images/water_uv_offset.png" type="Texture" id=2]
-[ext_resource path="res://scenes/platform_med_down'.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/level_prototype.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/platform_floor.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/platform_floor_down.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scenes/level_prototype.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/platform_med_down'.tscn" type="PackedScene" id=6]
 
 [sub_resource type="ShaderMaterial" id=1]
 resource_local_to_scene = true
@@ -19,7 +19,7 @@ shader_param/uv_offset_texture = ExtResource( 2 )
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 100, 10 )
 
-[node name="level" index="0" instance=ExtResource( 6 )]
+[node name="level" instance=ExtResource( 3 )]
 text_top = "Am I being paranoid or am I controlling it"
 text_bottom = "as much as it's controlling me?"
 
@@ -34,31 +34,31 @@ position = Vector2( 1059.69, -491.004 )
 [node name="platform_floor_shadow" parent="." index="10" instance=ExtResource( 5 )]
 
 [node name="p01" type="StaticBody2D" parent="." index="13"]
-position = Vector2( 800, -144 )
+position = Vector2( 800, -154 )
 
 [node name="shape" type="CollisionShape2D" parent="p01" index="0"]
 position = Vector2( 100, 0 )
 shape = SubResource( 2 )
 
 [node name="p02" type="StaticBody2D" parent="." index="14"]
-position = Vector2( 1225, -248 )
+position = Vector2( 1225, -258 )
 
 [node name="shape" type="CollisionShape2D" parent="p02" index="0"]
 position = Vector2( 100, 0 )
 shape = SubResource( 2 )
 
 [node name="p03" type="StaticBody2D" parent="." index="15"]
-position = Vector2( 960, -420 )
+position = Vector2( 960, -430 )
 
 [node name="shape" type="CollisionShape2D" parent="p03" index="0"]
 position = Vector2( 100, 0 )
 shape = SubResource( 2 )
 
-[node name="p01_s" parent="." index="16" instance=ExtResource( 3 )]
+[node name="p01_s" parent="." index="16" instance=ExtResource( 6 )]
 position = Vector2( 800, 144 )
 
-[node name="p02_s" parent="." index="17" instance=ExtResource( 3 )]
+[node name="p02_s" parent="." index="17" instance=ExtResource( 6 )]
 position = Vector2( 1225, 248 )
 
-[node name="p03_s" parent="." index="18" instance=ExtResource( 3 )]
+[node name="p03_s" parent="." index="18" instance=ExtResource( 6 )]
 position = Vector2( 960, 420 )
