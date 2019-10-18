@@ -6,7 +6,6 @@
 [ext_resource path="res://scripts/credits.gd" type="Script" id=4]
 [ext_resource path="res://assets/theme.tres" type="Theme" id=5]
 
-
 [node name="credits" type="Node2D"]
 script = ExtResource( 4 )
 
@@ -32,6 +31,8 @@ text = "My Shadow's Keeper by Inglo Games
 Water shader by GDQuest
 
 Bergie Seltzer font by David Kerkhoff
+
+Dirt art by brgfx
 
 Tree vector art from Vecteezy"
 align = 1
