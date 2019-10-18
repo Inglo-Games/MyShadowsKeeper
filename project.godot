@@ -30,6 +30,10 @@ config/name="My Shadows Keeper"
 run/main_scene="res://scenes/menu.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+bgm="*res://scripts/bgm.gd"
+
 [display]
 
 window/size/width=1920
