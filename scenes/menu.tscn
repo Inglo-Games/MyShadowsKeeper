@@ -5,8 +5,8 @@
 [ext_resource path="res://assets/bergieseltzer96.res" type="DynamicFont" id=3]
 [ext_resource path="res://assets/images/bg.svg" type="Texture" id=4]
 [ext_resource path="res://assets/images/water_reflection_material.tres" type="Material" id=5]
-[ext_resource path="res://scenes/platform_floor_down.tscn" type="PackedScene" id=6]
-[ext_resource path="res://scenes/platform_floor.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/platform_floor.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/platform_floor_down.tscn" type="PackedScene" id=7]
 
 [node name="menu" type="Node2D"]
 script = ExtResource( 1 )
@@ -21,14 +21,13 @@ centered = false
 offset = Vector2( 0, 540 )
 flip_v = true
 
-[node name="platform_floor" parent="." instance=ExtResource( 7 )]
+[node name="platform_floor" parent="." instance=ExtResource( 6 )]
 position = Vector2( 0, 540 )
 
-[node name="platform_floor_down" parent="." instance=ExtResource( 6 )]
+[node name="platform_floor_down" parent="." instance=ExtResource( 7 )]
 position = Vector2( 0, 540 )
 
 [node name="shader" type="ColorRect" parent="."]
-visible = false
 material = ExtResource( 5 )
 margin_right = 1920.0
 margin_bottom = 1080.0
