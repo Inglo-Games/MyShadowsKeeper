@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scripts/character.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://assets/images/char.svg" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 32 )
@@ -14,11 +14,13 @@ position = Vector2( 0, -32 )
 shape = SubResource( 1 )
 
 [node name="self_sprite" type="Sprite" parent="."]
-texture = ExtResource( 2 )
-offset = Vector2( 0, -32 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 3 )
+offset = Vector2( 0, -215 )
 
 [node name="shadow_sprite" type="Sprite" parent="."]
 self_modulate = Color( 0.203922, 0.203922, 0.203922, 1 )
-texture = ExtResource( 2 )
-offset = Vector2( 0, 32 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 3 )
+offset = Vector2( 0, 215 )
 flip_v = true
