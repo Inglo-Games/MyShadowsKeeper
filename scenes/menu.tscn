@@ -16,6 +16,7 @@ texture = ExtResource( 4 )
 centered = false
 
 [node name="bg_shadow" type="Sprite" parent="."]
+modulate = Color( 0.580392, 0.580392, 0.580392, 1 )
 texture = ExtResource( 4 )
 centered = false
 offset = Vector2( 0, 540 )

@@ -28,10 +28,12 @@ smoothing_enabled = true
 layer = -2
 
 [node name="bg" type="Sprite" parent="bg"]
+position = Vector2( 0, -2.93634 )
 texture = ExtResource( 1 )
 centered = false
 
 [node name="bg_shadow" type="Sprite" parent="bg"]
+modulate = Color( 0.580392, 0.580392, 0.580392, 1 )
 texture = ExtResource( 1 )
 centered = false
 offset = Vector2( 0, 540 )

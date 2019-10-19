@@ -7,6 +7,7 @@
 extents = Vector2( 960, 10 )
 
 [node name="platform_floor_down" type="StaticBody2D"]
+modulate = Color( 0.580392, 0.580392, 0.580392, 1 )
 
 [node name="shape" type="CollisionShape2D" parent="."]
 position = Vector2( 960, 10 )
